@@ -8,7 +8,7 @@ import {
   deleteDoc,
   or,
   getDoc,
-  updateDoc
+  updateDoc,
 } from "firebase/firestore";
 import App from "./config";
 import { getFirestore } from "firebase/firestore";
@@ -55,7 +55,6 @@ export async function GetAllUser() {
 }
 
 export async function GetUserByNim(nim: any) {
-  console.log("nim", nim);
   const q = query(collection(db, "users"), or(where("nim", "==", nim)));
   const querySnapshot = await getDocs(q);
   const response: any = querySnapshot.docs.map((doc) => {
@@ -90,23 +89,42 @@ export async function DeleteUser(id: any) {
     await deleteDoc(doc(db, "users", id));
     return { status: true, statusCode: 200 };
   } catch {
-    console.log("masuk catch", typeof id);
     return { status: false, statusCode: 501 };
   }
 }
 
-export async function UpdateUser({id,dataUpdate} : {id:string,dataUpdate:any}) {
+export async function UpdateUser({
+  id,
+  dataUpdate,
+}: {
+  id: string;
+  dataUpdate: any;
+}) {
   const { status } = await GetUserById(id);
   if (!status) {
     return { status: false, statusCode: 401 };
   }
 
   const userRef = doc(db, "users", id);
-    try{
-      await updateDoc(userRef, dataUpdate);
-      return {status : true, statusCode : 200}
+  try {
+    await updateDoc(userRef, dataUpdate);
+    return { status: true, statusCode: 200 };
+  } catch {
+    return { status: false, statusCode: 501 };
+  }
+}
+
+export async function Login(inputUser: any) {
+  try {
+    const { status, data } = await GetUserByNim(inputUser.nim);
+    if (!status) {
+      return { status, statusCode:401, data };
     }
-    catch{
-      return {status : false, statusCode : 501}
+    if (data[0].password == inputUser.password) {
+      return { status, statusCode: 200, data:data[0] };
     }
+    return { status: false, statusCode: 401, data: null };
+  } catch {
+    return { status: false, statusCode: 501, data: null };
+  }
 }
