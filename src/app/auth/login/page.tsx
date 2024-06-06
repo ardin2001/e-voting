@@ -55,7 +55,7 @@ function Login() {
     )
 }
 
-export function Searchbar() {
+export default function WrapperLogin() {
     return (
         // You could have a loading skeleton as the `fallback` too
         <Suspense>
