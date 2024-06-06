@@ -4,19 +4,21 @@ import { useSession, signIn, signOut } from "next-auth/react"
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useSearchParams } from "next/navigation";
-export default function Login() {
+import { Suspense } from 'react'
+
+function Login() {
     const router = useRouter();
     const searchParams = useSearchParams();
     const [message, setMessage] = useState("");
     const callBack = searchParams.get('callbackUrl') || 'http://localhost:3000'
-    console.log('callBack :',callBack)
-    const HandlerLogin = async (event:any) =>{
+    console.log('callBack :', callBack)
+    const HandlerLogin = async (event: any) => {
         event.preventDefault();
         const response: any = await signIn("credentials", {
             nim: event.target.nim.value,
             password: event.target.password.value,
             redirect: false,
-            callbackUrl : callBack
+            callbackUrl: callBack
         });
 
         if (response.ok) {
@@ -50,5 +52,14 @@ export default function Login() {
                 </div>
             </div>
         </div>
+    )
+}
+
+export function Searchbar() {
+    return (
+        // You could have a loading skeleton as the `fallback` too
+        <Suspense>
+            <Login />
+        </Suspense>
     )
 }
