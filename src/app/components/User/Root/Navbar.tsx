@@ -8,7 +8,7 @@ export default function Navbar() {
     return (
         <div className="bg-white grid py-2.5 md:grid-flow-col md:grid-cols-3 md:items-center px-6 sm:px-10 md:px-16 lg:px-24 xl:px-36 mx-auto drop-shadow-low sticky top-0 z-50">
             <div className="grid grid-flow-col justify-between items-center md:col-span-2">
-                <h3 className="text-primary text-xl font-bold">Aseloley App</h3>
+                <h3 className="text-primary text-xl font-bold">E-Voting App</h3>
                 <IoMdMenu className="text-2xl sm:text-3xl text-primary md:hidden" onClick={setStatus} />
             </div>
             <div className={`${status ? "block" : "hidden"} md:block url text-center`}>

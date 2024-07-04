@@ -13,7 +13,7 @@ const Maps = () => {
       >
         <Marker position={{ lat: -8.097987, lng: 113.234853 }} />
         <InfoWindow position={{ lat: -8.097987, lng: 113.234853 }} >
-          <h4>Aseloley Cafe</h4>
+          <h4>E-Voting App</h4>
           <p>Jln. Aseloley No.44 Lumajang</p>
         </InfoWindow>
       </Map>

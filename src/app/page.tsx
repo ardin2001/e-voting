@@ -22,10 +22,10 @@ export default async function Home() {
         <div className="banner grid sm:grid-cols-2 gap-8 sm:gap-0 md:items-center">
           <div className="left">
             <div className="caption grid gap-2">
-              <h3 className="text-secondary text-3xl lg:text-5xl font-semibold mb-1 lg:mb-3">Soul Cafe</h3>
-              <h3 className="text-white bg-secondary text-3xl py-1 px-1.5 sm:px-2 lg:p-2.5 lg:text-5xl font-bold w-min">#CAFEKEKINIAN</h3>
+              <h3 className="text-secondary text-3xl lg:text-5xl font-semibold mb-1 lg:mb-3">E-Voting App</h3>
+              <h3 className="text-white bg-secondary text-3xl py-1 px-1.5 sm:px-2 lg:p-2.5 lg:text-5xl font-bold w-min">#ONLINEVOTING</h3>
               <p className="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur porro, illum reiciendis quisquam deleniti iusto accusantium vel quae perspiciatis nulla ducimus natus similique, quod id.</p>
-              <Link href="/auth/login" className="py-1 lg:mt-6 bg-secondary rounded-lg text-white font-semibold w-min px-4 lg:px-5">Login/Register</Link>
+              <Link href="/auth/login" className="py-1 lg:mt-6 bg-secondary rounded-lg text-white font-semibold w-max px-4 lg:px-5">Login Here</Link>
             </div>
           </div>
           <div className="right grid self-center">
@@ -69,10 +69,10 @@ export default async function Home() {
         </div>
       </div>
       <Banner />
-      <div className="maps grid gap-5 my-28 w-85/100 md:h-4/5 lg:w-3/4 mx-auto lg:grid-cols-2">
+      <div className="maps grid gap-5 mt-28 mb-20 md:mt-40 md:mb-24 lg:mb-28 lg:mt-56 xl:mt-64 w-85/100 md:h-4/5 lg:w-3/4 mx-auto lg:grid-cols-2">
         <div className="caption grid gap-5 sm:gap-6 md:gap-7 lg:gap-8 lg:h-min">
           <div className="description">
-            <h3 className="text-secondary text-2xl font-semibold lg:font-bold">Soul Cafe</h3>
+            <h3 className="text-secondary text-2xl font-semibold lg:font-bold">E-Voting App</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, blanditiis? Jln. Aseloley No.44 Lumajang</p>
           </div>
           <div className="contact">
@@ -80,7 +80,7 @@ export default async function Home() {
               <div className="info">
                 <div className="flex gap-2 items-center">
                   <PiBuildingOffice className="text-secondary text-3xl" />
-                  <h4 className="font-semibold text-lg">Soul Cafe</h4>
+                  <h4 className="font-semibold text-lg">E-Voting App</h4>
                 </div>
                 <p className="ml-9"> Jln. Aseloley No.44 Lumajang</p>
               </div>

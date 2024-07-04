@@ -48,7 +48,7 @@ const config: Config = {
         quinary: "#EAEAEA",
         strong : "#b3faff",
         medium : "#ccfcff",
-        low : "#e6fdff"
+        low : "#fafeff"
       },
       textColor: {
         primary: "#008C95",
@@ -58,7 +58,7 @@ const config: Config = {
         quinary: "#EAEAEA",
         strong : "#b3faff",
         medium : "#ccfcff",
-        low : "#e6fdff"
+        low : "#fafeff"
       },
       backgroundColor: {
         primary: "#008C95",
@@ -68,7 +68,7 @@ const config: Config = {
         quinary: "#EAEAEA",
         strong : "#b3faff",
         medium : "#ccfcff",
-        low : "#e6fdff"
+        low : "#fafeff"
       },
       outlineColor: {
         primary: "#008C95",
@@ -78,7 +78,7 @@ const config: Config = {
         quinary: "#EAEAEA",
         strong : "#b3faff",
         medium : "#ccfcff",
-        low : "#e6fdff"
+        low : "#fafeff"
       },
       inset: {
         "1/10": "10%",
@@ -116,7 +116,7 @@ const config: Config = {
         custom: "#1E3554",
         strong : "#b3faff",
         medium : "#ccfcff",
-        low : "#e6fdff"
+        low : "#fafeff"
       },
       borderWidth: {
         1: "1px",
