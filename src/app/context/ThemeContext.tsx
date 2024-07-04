@@ -1,6 +1,6 @@
 'use client'
 import { createContext } from 'react'
-import UseStatus from '../hooks/UseStatus';
+import UseStatus from '../UseStatus';
 
 const ThemeContext = createContext({})
 function ThemeContextProvider({ children }: any) {
