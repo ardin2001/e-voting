@@ -30,7 +30,7 @@ function Login() {
     }
     return (
         <div className="lg:grid lg:h-screen">
-            <div className="grid my-5 mx-8 gap-8 lg:grid-cols-2 lg:shadow-custom1 lg:rounded-2xl lg:px-10 lg:bg-white">
+            <div className="grid my-5 mx-8 lg:my-8 lg:mx-10 gap-8 lg:grid-cols-2 lg:shadow-intermediate lg:shadow-gray-300 lg:rounded-2xl lg:px-10 lg:bg-white">
                 <div className="description grid gap-4 lg:my-auto lg:flex lg:flex-col lg:gap-5">
                     <h3 className="text-secondary font-bold text-3xl text-center mt-6 lg:mt-0">E-Voting App</h3>
                     <div className="image">
